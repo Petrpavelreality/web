@@ -2429,7 +2429,7 @@
         </div>
       </div>
     </div>
-    
+
 <script>
 (function() {
   class CookieManager {
@@ -2571,22 +2571,36 @@
         gtag('config','G-QVGLEFLZ38');
       }
 
-      // FB Pixel
+      // FB Pixel + CAPI s deduplikací
       if(this.cookieConsent.marketing&&!window.fbq){
-        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)n._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)n._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+        t=b.createElement(e);t.async=!0;t.src=v;
+        s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
         }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-        window.fbq('init','1839880890251639');
-        window.fbq('track','PageView');
-      }
 
-      // CAPI PageView
-      if(this.cookieConsent.analytics||this.cookieConsent.marketing){
-        fetch("/.netlify/functions/fb-capi?url="+encodeURIComponent(window.location.href))
-          .then(r=>r.json())
-          .then(resp=>console.log("fb-capi:",resp))
-          .catch(err=>console.error("fb-capi error:",err));
+        const eventId = 'ev_' + Date.now() + '_' + Math.floor(Math.random()*100000);
+        window.fbq('init','1839880890251639');
+        window.fbq('track','PageView', {}, {eventID: eventId});
+
+        const fbp = this.getCookie('_fbp');
+        const fbc = this.getCookie('_fbc');
+
+        fetch("/.netlify/functions/fb-capi", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({
+            event_name: "PageView",
+            event_id: eventId,
+            fbp: fbp,
+            fbc: fbc,
+            url: window.location.href
+          })
+        })
+        .then(r=>r.json())
+        .then(resp=>console.log("fb-capi:", resp))
+        .catch(err=>console.error("fb-capi error:", err));
       }
     }
 
@@ -2596,9 +2610,8 @@
     }
   }
 
-  window.cookieManager=new CookieManager();
+  window.cookieManager = new CookieManager();
 
-  // track clicks & form submits
   document.addEventListener('click',function(e){
     const tel=e.target.closest?.('a[href^="tel:"]');
     if(tel) window.cookieManager.trackEvent('Contact',{event_category:'click',event_label:'phone'});
@@ -2609,7 +2622,9 @@
   document.addEventListener('submit',function(e){
     if(e.target?.id==='estimateForm') window.cookieManager.trackEvent('Lead',{event_category:'form',event_label:'estimate_form'});
   });
+
 })();
+
 </script>
 </body>
 </html>
