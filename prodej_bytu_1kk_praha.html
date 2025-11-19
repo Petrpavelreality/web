@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Designový byt 1+kk Praha na prodej | Petr Pavel Reality</title>
     <meta name="description" content="Prodej designového bytu 1+kk po luxusní rekonstrukci v klidné části Prahy. Slunný interiér, originální umělecké prvky, společná zahrada a kompletní občanská vybavenost v dosahu.">
-    <meta name="keywords" content="prodej bytu Praha, byt 1+kk, luxusní rekonstrukce, designový byt, Petr Pavel reality">
+    <meta name="keywords" content="prodej bytu Praha, byt 1+kk, luxusní rekonstrukce, garsoniera, byt na prodej, designový byt, Petr Pavel Reality">
     <meta name="author" content="Petr Pavel Reality">
     <link rel="canonical" href="https://pavelreality.cz/prodej_bytu_1kk_praha">
 
@@ -22,8 +22,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Designový byt 1+kk Praha na prodej | Petr Pavel Reality">
-    <meta property="og:description" content="Luxusně zrekonstruovaný byt 1+kk ve 2. patře cihlového domu v klidné části Prahy. Prohlédněte si galerii 15 fotografií a videoprohlídku.">
+    <meta property="og:title" content="Prodej bytu 1+kk Praha | Petr Pavel Reality">
+    <meta property="og:description" content="Luxusně zrekonstruovaný byt 1+kk v klidné části Prahy. Klikněte a zažijte atmosféru bytu ještě před osobní návštěvou.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://pavelreality.cz/prodej_bytu_1kk_praha">
     <meta property="og:image" content="https://pavelreality.cz/Prodej_bytu_1+kk_Praha1.png">
@@ -75,33 +75,6 @@
             "name": "Petr Pavel Reality",
             "telephone": "+420 739 532 056",
             "email": "petr.pavel@qara.cz"
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "6690000",
-            "priceCurrency": "CZK",
-            "availability": "https://schema.org/InStock"
-        }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "VideoObject",
-        "name": "Videoprohlídka bytu 1+kk Praha",
-        "description": "Kompletní videoprohlídka designového bytu 1+kk po luxusní rekonstrukci v klidné části Prahy.",
-        "thumbnailUrl": "https://img.youtube.com/vi/vJznDISW6kg/maxresdefault.jpg",
-        "uploadDate": "2025-01-15",
-        "duration": "PT2M30S",
-        "contentUrl": "https://www.youtube.com/watch?v=vJznDISW6kg",
-        "embedUrl": "https://www.youtube-nocookie.com/embed/vJznDISW6kg",
-        "publisher": {
-            "@type": "Organization",
-            "name": "Petr Pavel Reality",
-            "logo": {
-                "@type": "ImageObject",
-                "url": "https://pavelreality.cz/logo.png"
-            }
         }
     }
     </script>
@@ -506,111 +479,18 @@
 
         .video-wrapper {
             position: relative;
+            padding-top: 56.25%;
             border-radius: 18px;
             overflow: hidden;
             box-shadow: var(--shadow-lg);
-            background: rgba(0, 0, 0, 0.85);
         }
 
-        .video-wrapper::before {
-            content: "";
-            display: block;
-            padding-top: 56.25%;
-        }
-
-        .video-wrapper iframe,
-        .video-placeholder,
-        .video-fallback-wrapper {
+        .video-wrapper iframe {
             position: absolute;
             inset: 0;
             width: 100%;
             height: 100%;
-        }
-
-        .video-placeholder {
-            border: none;
-            background: transparent;
-            cursor: pointer;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .video-placeholder img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.82);
-            pointer-events: none;
-            transition: transform 0.4s ease, filter 0.4s ease;
-        }
-
-        .video-placeholder .play-icon {
-            position: absolute;
-            width: 84px;
-            height: 84px;
-            border-radius: 50%;
-            background: rgba(8, 22, 54, 0.85);
-            color: var(--primary-text);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-            pointer-events: none;
-            transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
-        }
-
-        .video-placeholder:hover img,
-        .video-placeholder:focus img {
-            transform: scale(1.05);
-            filter: brightness(1);
-        }
-
-        .video-placeholder:hover .play-icon,
-        .video-placeholder:focus .play-icon {
-            transform: scale(1.05);
-            background: rgba(199, 164, 110, 0.92);
-            color: var(--primary-bg);
-        }
-
-        .video-placeholder:focus {
-            outline: 3px solid var(--primary-text);
-            outline-offset: 6px;
-        }
-
-        .video-wrapper iframe {
             border: 0;
-        }
-
-        .video-fallback-wrapper {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            text-align: center;
-            background: linear-gradient(135deg, rgba(8, 22, 54, 0.9), rgba(5, 15, 36, 0.75));
-        }
-
-        .video-fallback {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.9rem 1.8rem;
-            border-radius: 999px;
-            background: rgba(199, 164, 110, 0.18);
-            color: var(--primary-text);
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-
-        .video-fallback:hover,
-        .video-fallback:focus {
-            background: rgba(199, 164, 110, 0.32);
-            transform: translateY(-2px);
-            outline: none;
         }
 
         .cta-section {
@@ -625,52 +505,6 @@
             padding: 3rem;
             box-shadow: var(--shadow-lg);
             text-align: center;
-        }
-
-        .price-highlight {
-            background: #f9f6f1;
-        }
-
-        .price-card {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--white);
-            border-radius: 24px;
-            padding: 3rem;
-            box-shadow: var(--shadow-lg);
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .price-figure {
-            text-align: center;
-            border-right: 1px solid rgba(8, 22, 54, 0.08);
-            padding-right: 2rem;
-        }
-
-        .price-figure h3 {
-            margin: 0;
-            font-size: clamp(2.2rem, 4vw, 3rem);
-            color: var(--primary-bg);
-        }
-
-        .price-figure span {
-            display: block;
-            font-size: 0.95rem;
-            color: var(--gray);
-            margin-top: 0.25rem;
-        }
-
-        .price-details h4 {
-            margin-bottom: 0.75rem;
-            color: var(--primary-bg);
-        }
-
-        .price-details p {
-            margin-bottom: 0.5rem;
-            color: #555;
         }
 
         .cta-card h3 {
@@ -814,18 +648,6 @@
             .cta-card {
                 padding: 2.5rem 2rem;
             }
-
-            .price-card {
-                grid-template-columns: 1fr;
-                padding: 2rem;
-            }
-
-            .price-figure {
-                border-right: none;
-                border-bottom: 1px solid rgba(8, 22, 54, 0.08);
-                padding-right: 0;
-                padding-bottom: 1.5rem;
-            }
         }
 
         @media (max-width: 576px) {
@@ -855,92 +677,13 @@
             }
         }
     </style>
-
-    <!-- Cookie Consent CSS (shared with index) -->
-    <style>
-      .cookie-banner{position:fixed;bottom:0;left:0;right:0;background:rgba(8,22,54,.98);backdrop-filter:blur(10px);color:#fff;padding:20px;z-index:10000;transform:translateY(100%);transition:transform .3s ease;border-top:3px solid #C7A46E}
-      .cookie-banner.show{transform:translateY(0)}
-      .cookie-content{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
-      .cookie-text{flex:1;min-width:300px}
-      .cookie-text h4{color:#C7A46E;margin:0 0 10px 0;font-size:1.1em;font-weight:600}
-      .cookie-text p{margin:0;line-height:1.5;font-size:.95em}
-      .cookie-buttons{display:flex;gap:10px;flex-wrap:wrap}
-      .cookie-btn{padding:10px 20px;border:none;border-radius:5px;cursor:pointer;font-weight:500;transition:all .3s ease;font-size:.9em}
-      .cookie-btn-accept{background:#C7A46E;color:#fff}
-      .cookie-btn-accept:hover{background:#9b7d4f}
-      .cookie-btn-decline{background:transparent;color:#C7A46E;border:2px solid #C7A46E}
-      .cookie-btn-decline:hover{background:#C7A46E;color:#fff}
-      .cookie-btn-settings{background:transparent;color:#fff;border:1px solid #666}
-      .cookie-btn-settings:hover{background:#666}
-      .cookie-modal{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.8);z-index:10001;display:none;align-items:center;justify-content:center;padding:20px}
-      .cookie-modal.show{display:flex}
-      .cookie-modal-content{background:#fff;border-radius:10px;max-width:600px;width:100%;max-height:80vh;overflow-y:auto;position:relative}
-      .cookie-modal-header{background:#081636;color:#fff;padding:20px;border-radius:10px 10px 0 0;position:relative}
-      .cookie-modal-close{position:absolute;top:15px;right:20px;background:none;border:none;color:#fff;font-size:24px;cursor:pointer;width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center}
-      .cookie-modal-close:hover{background:rgba(255,255,255,.1)}
-      .cookie-modal-body{padding:20px}
-      .cookie-category{margin-bottom:20px;border:1px solid #ddd;border-radius:5px;overflow:hidden}
-      .cookie-category-header{background:#f8f9fa;padding:15px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
-      .cookie-category-header h5{margin:0;color:#081636;font-weight:600}
-      .cookie-toggle{position:relative;width:50px;height:24px;background:#ccc;border-radius:12px;transition:background .3s}
-      .cookie-toggle.active{background:#C7A46E}
-      .cookie-toggle::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;background:#fff;border-radius:50%;transition:transform .3s}
-      .cookie-toggle.active::after{transform:translateX(26px)}
-      .cookie-category-content{padding:15px;display:none;border-top:1px solid #eee}
-      .cookie-category-content.show{display:block}
-      .cookie-modal-footer{padding:20px;border-top:1px solid #eee;display:flex;gap:10px;justify-content:flex-end}
-      @media (max-width:768px){.cookie-content{flex-direction:column;text-align:center}.cookie-buttons{justify-content:center}.cookie-modal-footer{flex-direction:column}}
-    </style>
-
-    <!-- FBC + FBP helper -->
-    <script>
-      (function () {
-        function getParam(name) {
-          const url = new URL(window.location.href);
-          return url.searchParams.get(name);
-        }
-        function getCookie(name) {
-          const m = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-          return m ? decodeURIComponent(m[2]) : null;
-        }
-
-        const fbclid = getParam('fbclid');
-        if (fbclid) {
-          const ts = Math.floor(Date.now() / 1000);
-          const fbcValue = `fb.1.${ts}.${fbclid}`;
-          const maxAge = 60 * 60 * 24 * 90;
-          document.cookie = `_fbc=${encodeURIComponent(fbcValue)}; path=/; max-age=${maxAge};`;
-        }
-
-        const fbc = getCookie('_fbc');
-        const fbp = getCookie('_fbp');
-        const eventId = `${Date.now()}_${Math.random().toString(36).slice(2,10)}`;
-
-        fetch('/.netlify/functions/capi', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            event_name: 'PageView',
-            event_time: Math.floor(Date.now() / 1000),
-            event_id: eventId,
-            url: window.location.href,
-            fbc: fbc || null,
-            fbp: fbp || null
-          })
-        });
-
-        if (window.fbq) {
-          window.fbq('track', 'PageView', {}, { eventID: eventId });
-        }
-      })();
-    </script>
 </head>
 <body>
     <header>
         <nav>
             <a href="/" class="logo">
-                PETR PAVEL
-                <img src="logo.png" alt="QARA Reality logo">
+                <img src="/logo.png" alt="Logo Petr Pavel Reality">
+                Petr Pavel
             </a>
             <ul class="nav-links">
                 <li><a href="/">Domů</a></li>
@@ -948,7 +691,7 @@
                 <li><a href="#video">Videoprohlídka</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
-            <div class="mobile-menu" aria-label="Menu">
+            <div class="mobile-menu" aria-label="Otevřít menu" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -960,12 +703,11 @@
         <section class="hero">
             <div class="hero-content">
                 <h1>Design, světlo a klid – byt, který si zamilujete</h1>
-                <p>Luxusně zrekonstruovaný byt 1+kk ve 2. patře cihlového domu, jen pár kroků od zeleně a klánovického lesa. Moderní interiér, originální umělecké prvky a společná zahrada k relaxaci.</p>
                 <div class="property-meta">
                     <span class="meta-item">1+kk</span>
-                    <span class="meta-item">2. patro cihlového domu</span>
+                    <span class="meta-item">36,53 m²</span>
                     <span class="meta-item">Klidná část Prahy</span>
-                    <span class="meta-item">Nízké náklady 1 675 Kč</span>
+                    <span class="meta-item">Nízké náklady</span>
                 </div>
                 <a href="#galerie" class="cta-button">Prohlédnout galerii</a>
             </div>
@@ -975,17 +717,17 @@
             <div class="container">
                 <div class="intro-grid">
                     <div class="intro-text scroll-fade-in">
-                        <p>Design, světlo a klid – byt, který si zamilujete na první pohled. Nabízím k prodeji výjimečný byt 1+kk po kompletní, luxusní rekonstrukci. Každý detail zde byl promyšlen tak, aby spojoval estetiku, funkčnost a příjemnou atmosféru domova.</p>
+                        <p>Nabízím k prodeji výjimečný byt 1+kk po kompletní, luxusní rekonstrukci. Každý detail zde byl promyšlen tak, aby spojoval estetiku, funkčnost a příjemnou atmosféru domova.</p>
                         <p>Byt se nachází ve 2. patře cihlového domu v klidné části Prahy, obklopené zelení a rodinnými domy. Žádný panelák, žádný ruch, jen klid a soukromí. Na dosah máte i Klánovický les, ideální místo pro běh, cyklistiku nebo víkendový piknik.</p>
                         <p>Interiér působí jako z designového magazínu. Kuchyňská linka na míru nabízí dostatek prostoru a je vybavena špičkovými spotřebiči. Dominantou obývací části je originální dekorativní plastika skály, která dodává bytu osobitý charakter a světový styl.</p>
                     </div>
                     <div class="highlights scroll-fade-in-right">
-                        <h3 class="highlight-title">Proč si byt zamilujete</h3>
+                        <h3 class="highlight-title">Proč si byt zamilujete?</h3>
                         <ul class="highlight-list">
-                            <li><span class="highlight-icon">🌇</span><span>Večerní západy slunce, které zaplaví prostor teplým světlem a vytváří dokonalou atmosféru domova.</span></li>
-                            <li><span class="highlight-icon">🛁</span><span>Moderní koupelna s elegantní kombinací dlaždic a světla pro maximální komfort.</span></li>
-                            <li><span class="highlight-icon">🌿</span><span>Společná zahrada o výměře 634 m² ideální pro grilování, relax nebo setkání s přáteli.</span></li>
-                            <li><span class="highlight-icon">🚗</span><span>Bezproblémové parkování přímo u domu a nízké měsíční náklady pouhých 1 675 Kč.</span></li>
+                            <li><span class="highlight-icon">🌇</span><span>Večerní západy slunce, které zaplaví prostor teplým světlem. Tento byt má energii, která člověka okamžitě uklidní.</span></li>
+                            <li><span class="highlight-icon">🛁</span><span>Kuchyň na míru, kvalitní materiály, sjednocený styl, moderní koupelna a spousta úložného prostoru.</span></li>
+                            <li><span class="highlight-icon">🌿</span><span>Společná zahrada, která přináší další rozměr bydlení.</span></li>
+                            <li><span class="highlight-icon">🚗</span><span>Parkování přímo u domu a nízké měsíční náklady.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -998,7 +740,7 @@
                     <h2>Domov s charakterem</h2>
                     <p>Dominantou obývací části je originální umělecký prvek – dekorativní plastika skály, která dodává interiéru světový styl. Kuchyňská linka na míru nabízí dostatek úložného prostoru i pracovní plochy a je vybavena špičkovými spotřebiči pro komfortní každodenní vaření.</p>
                     <p>V koupelně najdete moderní vanu, promyšlenou kombinaci dlaždic a nepřímého osvětlení, která vytváří mimořádně útulnou atmosféru. Celý byt působí uceleně a harmonicky, díky čemuž se sem okamžitě zamilujete.</p>
-                    <p>Každý večer můžete sledovat západ slunce, který zaplaví prostor teplým světlem. Díky nízkým měsíčním nákladům je bydlení nejen krásné, ale i úsporné. K bytu patří společná zahrada o výměře 634 m², kde si snadno vytvoříte vlastní kout pro odpočinek, grilování nebo posezení s přáteli.</p>
+                    <p>Každý večer můžete sledovat západ slunce, který zaplaví prostor teplým světlem. Díky nízkým měsíčním nákladům 1 675 Kč je bydlení nejen krásné, ale i úsporné. K bytu patří společná zahrada o výměře 634 m², kde si snadno vytvoříte vlastní kout pro odpočinek, grilování nebo posezení s přáteli.</p>
                     <p>Parkování je bezproblémové přímo u domu a klidná atmosféra lokality nabízí ideální podmínky pro relax po náročném dni.</p>
                 </div>
             </div>
@@ -1070,40 +812,8 @@
                 <p class="scroll-fade-in" style="max-width: 720px; margin: 0 auto 2rem; text-align: center; color: rgba(255,255,255,0.85);">
                     Podívejte se na kompletní videoprohlídku a zažijte atmosféru bytu ještě před osobní návštěvou.
                 </p>
-                <!-- Lazy load videa s náhledovým obrázkem: iframe se načte až po kliknutí na tlačítko Přehrát -->
-                <div class="video-wrapper scroll-fade-in" data-video-url="https://www.youtube.com/watch?v=vJznDISW6kg" data-video-id="vJznDISW6kg" data-video-title="Videoprohlídka bytu 1+kk Praha">
-                    <div class="video-fallback-wrapper" data-video-source hidden aria-hidden="true">
-                        <a class="video-fallback" href="https://www.youtube.com/watch?v=vJznDISW6kg" target="_blank" rel="noopener" tabindex="-1">
-                            ▶️ Otevřít videoprohlídku na YouTube
-                        </a>
-                    </div>
-                    <noscript>
-                        <div class="video-fallback-wrapper">
-                            <a class="video-fallback" href="https://www.youtube.com/watch?v=vJznDISW6kg" target="_blank" rel="noopener">
-                                ▶️ Otevřít videoprohlídku na YouTube
-                            </a>
-                        </div>
-                    </noscript>
-                </div>
-            </div>
-        </section>
-
-        <section class="price-highlight" id="cena">
-            <div class="container">
-                <div class="price-card scroll-fade-in">
-                    <div class="price-figure">
-                        <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; color: var(--gray);">Cena nemovitosti</p>
-                        <h3>6 690 000 Kč</h3>
-                        <span>včetně provize a kompletního realitního servisu</span>
-                    </div>
-                    <div class="price-details">
-                        <h4>Co je součástí ceny</h4>
-                        <p>• Kompletně zrekonstruovaný byt 1+kk v osobním vlastnictví.</p>
-                        <p>• Originální interiérové prvky, kuchyň na míru a plně vybavené zázemí.</p>
-                        <p>• Právní servis, bezpečná úschova prostředků a jistota hladkého převodu.</p>
-                        <p><strong>Bonus:</strong> nízké měsíční náklady 1 675 Kč a přístup na společnou zahradu o 634 m².</p>
-                        <a class="cta-button" href="#kontakt">Domluvit schůzku</a>
-                    </div>
+                <div class="video-wrapper scroll-fade-in">
+                    <iframe src="https://youtu.be/vJznDISW6kg" title="Videoprohlídka bytu 1+kk Praha" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                 </div>
             </div>
         </section>
@@ -1124,8 +834,9 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Petr Pavel Reality. Všechna práva vyhrazena.</p>
+        <p>&copy; 2025 Petr Pavel - Realitní makléř Praha. Všechna práva vyhrazena.</p>
         <p><a href="/ochrana-osobnich-udaju.html" style="color: var(--primary-text); text-decoration: none;">Ochrana osobních údajů</a></p>
+        <p>Nezávisle provozovaná realitní kancelář Petr Pavel Reality je součástí sítě realitních kanceláří v rámci franšízy QARA.</a></p>
     </footer>
 
     <script>
@@ -1183,166 +894,6 @@
             document.querySelectorAll('.stagger-animation').forEach(el => {
                 staggerObserver.observe(el);
             });
-
-            const isValidYouTubeId = (value) => /^[\w-]{11}$/.test(value);
-
-            const extractYouTubeId = (input) => {
-                if (!input) {
-                    return '';
-                }
-
-                const trimmed = input.trim();
-
-                if (isValidYouTubeId(trimmed)) {
-                    return trimmed;
-                }
-
-                try {
-                    const url = new URL(trimmed);
-                    const hostname = url.hostname.replace('www.', '');
-
-                    if (hostname === 'youtu.be') {
-                        const parts = url.pathname.split('/').filter(Boolean);
-                        const candidate = parts.pop() || '';
-                        return isValidYouTubeId(candidate) ? candidate : '';
-                    }
-
-                    if (hostname === 'youtube.com' || hostname === 'm.youtube.com' || hostname === 'youtube-nocookie.com') {
-                        if (url.searchParams.has('v')) {
-                            const candidate = url.searchParams.get('v') || '';
-                            return isValidYouTubeId(candidate) ? candidate : '';
-                        }
-
-                        const segments = url.pathname.split('/').filter(Boolean);
-
-                        const embedIndex = segments.indexOf('embed');
-                        if (embedIndex !== -1 && segments[embedIndex + 1]) {
-                            const candidate = segments[embedIndex + 1];
-                            return isValidYouTubeId(candidate) ? candidate : '';
-                        }
-
-                        const shortsIndex = segments.indexOf('shorts');
-                        if (shortsIndex !== -1 && segments[shortsIndex + 1]) {
-                            const candidate = segments[shortsIndex + 1];
-                            return isValidYouTubeId(candidate) ? candidate : '';
-                        }
-
-                        const liveIndex = segments.indexOf('live');
-                        if (liveIndex !== -1 && segments[liveIndex + 1]) {
-                            const candidate = segments[liveIndex + 1];
-                            return isValidYouTubeId(candidate) ? candidate : '';
-                        }
-                    }
-                } catch (error) {
-                    const fallbackMatch = trimmed.match(/[\w-]{11}/);
-                    if (fallbackMatch && isValidYouTubeId(fallbackMatch[0])) {
-                        return fallbackMatch[0];
-                    }
-                }
-
-                return '';
-            };
-
-            const initVideoTour = () => {
-                const wrapper = document.querySelector('.video-wrapper');
-                if (!wrapper) {
-                    return;
-                }
-
-                const noscriptElement = wrapper.querySelector('noscript');
-                if (noscriptElement) {
-                    noscriptElement.remove();
-                }
-
-                const videoTitle = wrapper.dataset.videoTitle || 'Videoprohlídka';
-                const hasPlaceholder = (value) => /video_id/i.test(value || '');
-                const rawUrlAttr = wrapper.dataset.videoUrl && !hasPlaceholder(wrapper.dataset.videoUrl)
-                    ? wrapper.dataset.videoUrl.trim()
-                    : '';
-                const rawId = wrapper.dataset.videoId ? wrapper.dataset.videoId.trim() : '';
-                const fallbackLink = wrapper.querySelector('.video-fallback');
-                const fallbackHref = fallbackLink ? fallbackLink.getAttribute('href') || '' : '';
-                const sanitizedFallbackUrl = fallbackHref && !hasPlaceholder(fallbackHref) && fallbackHref !== '#'
-                    ? fallbackHref.trim()
-                    : '';
-                const proxySource = wrapper.querySelector('[data-video-source]');
-                if (proxySource) {
-                    proxySource.remove();
-                }
-                const rawUrl = rawUrlAttr || sanitizedFallbackUrl;
-
-                const videoId = extractYouTubeId(rawId || rawUrl);
-                const watchUrl = rawUrl || (videoId ? `https://www.youtube.com/watch?v=${videoId}` : '');
-
-                if (!videoId) {
-                    if (!watchUrl || hasPlaceholder(watchUrl)) {
-                        return;
-                    }
-
-                    const fallbackWrapper = document.createElement('div');
-                    fallbackWrapper.className = 'video-fallback-wrapper';
-
-                    const fallbackLink = document.createElement('a');
-                    fallbackLink.className = 'video-fallback';
-                    fallbackLink.href = watchUrl;
-                    fallbackLink.target = '_blank';
-                    fallbackLink.rel = 'noopener';
-                    fallbackLink.textContent = 'Otevřít videoprohlídku na YouTube';
-
-                    fallbackWrapper.appendChild(fallbackLink);
-                    wrapper.appendChild(fallbackWrapper);
-                    return;
-                }
-
-                const placeholder = document.createElement('button');
-                placeholder.type = 'button';
-                placeholder.className = 'video-placeholder';
-                placeholder.setAttribute('aria-label', `Přehrát ${videoTitle}`);
-
-                const thumbnail = new Image();
-                thumbnail.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
-                thumbnail.alt = `${videoTitle} – náhled videa`;
-                thumbnail.loading = 'lazy';
-                placeholder.appendChild(thumbnail);
-
-                const playIcon = document.createElement('span');
-                playIcon.className = 'play-icon';
-                playIcon.setAttribute('aria-hidden', 'true');
-                playIcon.innerHTML = '&#9658;';
-                placeholder.appendChild(playIcon);
-
-                const loadVideo = () => {
-                    const iframe = document.createElement('iframe');
-                    const allowFeatures = [
-                        'accelerometer',
-                        'autoplay',
-                        'clipboard-write',
-                        'encrypted-media',
-                        'gyroscope',
-                        'picture-in-picture',
-                        'web-share'
-                    ].join('; ');
-                    iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
-                    iframe.title = videoTitle;
-                    iframe.allow = allowFeatures;
-                    iframe.loading = 'lazy';
-                    iframe.setAttribute('allowfullscreen', '');
-                    iframe.setAttribute('frameborder', '0');
-
-                    wrapper.innerHTML = '';
-                    wrapper.appendChild(iframe);
-                };
-
-                placeholder.addEventListener('click', loadVideo);
-                placeholder.addEventListener('keydown', (event) => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                        event.preventDefault();
-                        loadVideo();
-                    }
-                });
-
-                wrapper.appendChild(placeholder);
-            };
 
             const mainImage = document.querySelector('.gallery-main img');
             const prevBtn = document.querySelector('.gallery-control.prev');
@@ -1408,272 +959,8 @@
                 }
             });
 
-            initVideoTour();
             updateImage(0);
         });
-    </script>
-
-    <!-- Cookie Banner (shared component) -->
-    <div id="cookieBanner" class="cookie-banner" aria-live="polite" role="dialog" aria-label="Nastavení cookies">
-      <div class="cookie-content">
-        <div class="cookie-text">
-          <h4>🍪 Používáme cookies</h4>
-          <p>Abychom vám poskytli nejlepší zážitek, používáme cookies pro analýzu návštěvnosti a marketing. Nezbytné cookies fungují vždy.</p>
-        </div>
-        <div class="cookie-buttons">
-          <button class="cookie-btn cookie-btn-accept" id="cc-accept-all">Přijmout vše</button>
-          <button class="cookie-btn cookie-btn-decline" id="cc-decline-all">Odmítnout</button>
-          <button class="cookie-btn cookie-btn-settings" id="cc-open-settings">Nastavení</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Cookie Settings Modal -->
-    <div id="cookieModal" class="cookie-modal" aria-hidden="true">
-      <div class="cookie-modal-content">
-        <div class="cookie-modal-header">
-          <h3>Nastavení cookies</h3>
-          <button class="cookie-modal-close" id="cc-close-settings" aria-label="Zavřít">&times;</button>
-        </div>
-        <div class="cookie-modal-body">
-          <div class="cookie-category">
-            <div class="cookie-category-header" data-target="essential-content">
-              <h5>Nezbytné cookies</h5>
-              <div class="cookie-toggle active" data-disabled="true" aria-hidden="true"></div>
-            </div>
-            <div id="essential-content" class="cookie-category-content">
-              <p>Tyto cookies jsou nezbytné pro správné fungování webu a nelze je vypnout (např. uložení nastavení souhlasů).</p>
-            </div>
-          </div>
-
-          <div class="cookie-category">
-            <div class="cookie-category-header" data-target="analytics-content">
-              <h5>Analytické cookies</h5>
-              <div class="cookie-toggle" id="analytics-toggle" role="switch" aria-checked="false" tabindex="0"></div>
-            </div>
-            <div id="analytics-content" class="cookie-category-content">
-              <p>Pomáhají nám pochopit, jak návštěvníci používají web. Sbírají anonymní statistiky o návštěvnosti.</p>
-              <strong>Používané služby:</strong>
-              <ul>
-                <li>Google Analytics 4</li>
-                <li>Google Tag Manager</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="cookie-category">
-            <div class="cookie-category-header" data-target="marketing-content">
-              <h5>Marketingové cookies</h5>
-              <div class="cookie-toggle" id="marketing-toggle" role="switch" aria-checked="false" tabindex="0"></div>
-            </div>
-            <div id="marketing-content" class="cookie-category-content">
-              <p>Umožňují zobrazovat relevantní reklamu a měřit konverze.</p>
-              <strong>Používané služby:</strong>
-              <ul>
-                <li>Meta Pixel (Facebook)</li>
-                <li>Google Ads</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="cookie-modal-footer">
-          <button class="cookie-btn cookie-btn-decline" id="cc-save">Uložit nastavení</button>
-          <button class="cookie-btn cookie-btn-accept" id="cc-accept-all-2">Přijmout vše</button>
-        </div>
-      </div>
-    </div>
-
-    <script>
-    (function() {
-      class CookieManager {
-        constructor() {
-          this.cookieConsent = { essential: true, analytics: false, marketing: false };
-          this.init();
-        }
-
-        init() {
-          const saved = this.getCookie('cookieConsent');
-          if (saved) {
-            try { this.cookieConsent = JSON.parse(saved); } catch(e){}
-            this.setConsentDefaultsDenied();
-            this.updateConsentFlags();
-            this.loadScripts();
-          } else {
-            setTimeout(() => {
-              const banner = document.getElementById('cookieBanner');
-              if(banner) banner.classList.add('show');
-            }, 700);
-            this.setConsentDefaultsDenied();
-          }
-
-          const byId = id => document.getElementById(id);
-          ['cc-accept-all','cc-accept-all-2'].forEach(id => byId(id)?.addEventListener('click', () => this.acceptAll()));
-          byId('cc-decline-all')?.addEventListener('click', () => this.declineAll());
-          byId('cc-open-settings')?.addEventListener('click', () => this.openSettings());
-          byId('cc-close-settings')?.addEventListener('click', () => this.closeSettings());
-          byId('cc-save')?.addEventListener('click', () => { this.saveConsent(); this.closeSettings(); });
-
-          document.querySelectorAll('.cookie-category-header').forEach(h => {
-            h.addEventListener('click', (e) => {
-              if (e.target.classList.contains('cookie-toggle')) return;
-              const target = h.getAttribute('data-target');
-              document.getElementById(target)?.classList.toggle('show');
-            });
-          });
-
-          const bindToggle = (id, key) => {
-            const el = document.getElementById(id);
-            if(!el) return;
-            const updateUI = () => {
-              el.classList.toggle('active', !!this.cookieConsent[key]);
-              el.setAttribute('aria-checked', this.cookieConsent[key] ? 'true' : 'false');
-            };
-            el.addEventListener('click', () => { this.cookieConsent[key] = !this.cookieConsent[key]; updateUI(); });
-            el.addEventListener('keydown', ev => { if(ev.key==='Enter'||ev.key===' ') { ev.preventDefault(); el.click(); } });
-            updateUI();
-          };
-          bindToggle('analytics-toggle','analytics');
-          bindToggle('marketing-toggle','marketing');
-
-          byId('cookieSettingsLink')?.addEventListener('click', e=>{ e.preventDefault(); this.openSettings(); });
-        }
-
-        setConsentDefaultsDenied() {
-          window.dataLayer = window.dataLayer || [];
-          window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
-          window.gtag('consent','default',{
-            'ad_storage':'denied',
-            'ad_user_data':'denied',
-            'ad_personalization':'denied',
-            'analytics_storage':'denied'
-          });
-        }
-
-        updateConsentFlags() {
-          const granted = {
-            'ad_storage': this.cookieConsent.marketing ? 'granted' : 'denied',
-            'ad_user_data': this.cookieConsent.marketing ? 'granted' : 'denied',
-            'ad_personalization': this.cookieConsent.marketing ? 'granted' : 'denied',
-            'analytics_storage': this.cookieConsent.analytics ? 'granted' : 'denied'
-          };
-          if(window.gtag) window.gtag('consent','update',granted);
-          else if(window.dataLayer) window.dataLayer.push(['consent','update',granted]);
-          return granted;
-        }
-
-        setCookie(name,value,days) {
-          const expires = new Date(Date.now()+days*864e5).toUTCString();
-          const secure = location.protocol==='https:'?';Secure':'';
-          document.cookie = name+'='+value+';expires='+expires+';path=/;SameSite=Lax'+secure;
-        }
-
-        getCookie(name) {
-          const m=document.cookie.match(new RegExp('(^| )'+name+'=([^;]+)'));
-          return m?m[2]:null;
-        }
-
-        saveConsent() {
-          this.setCookie('cookieConsent', JSON.stringify(this.cookieConsent), 365);
-          this.hideBanner();
-          this.updateConsentFlags();
-          this.loadScripts();
-        }
-
-        hideBanner() {
-          const b = document.getElementById('cookieBanner');
-          if(b) b.classList.remove('show');
-        }
-
-        acceptAll() { this.cookieConsent={essential:true,analytics:true,marketing:true}; this.saveConsent(); this.closeSettings(); }
-        declineAll() { this.cookieConsent={essential:true,analytics:false,marketing:false}; this.saveConsent(); this.closeSettings(); }
-
-        openSettings() {
-          document.getElementById('cookieModal')?.classList.add('show');
-          document.body.style.overflow='hidden';
-          document.getElementById('analytics-toggle')?.classList.toggle('active', this.cookieConsent.analytics);
-          document.getElementById('marketing-toggle')?.classList.toggle('active', this.cookieConsent.marketing);
-        }
-
-        closeSettings() {
-          document.getElementById('cookieModal')?.classList.remove('show');
-          document.body.style.overflow='';
-        }
-
-        loadScripts() {
-          if((this.cookieConsent.analytics||this.cookieConsent.marketing)&&!window._gtmLoaded){
-            window._gtmLoaded=true;
-            window.dataLayer = window.dataLayer||[];
-            (function(w,d,s,l,i){
-              w[l]=w[l]||[];
-              w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-              var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-              j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-              f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-M47BDR75');
-          }
-
-          if(this.cookieConsent.analytics&&!document.querySelector('script[src*="gtag/js?id="]')){
-            var gtagScript=document.createElement('script'); gtagScript.async=true;
-            gtagScript.src='https://www.googletagmanager.com/gtag/js?id=G-QVGLEFLZ38';
-            document.head.appendChild(gtagScript);
-            window.dataLayer=window.dataLayer||[];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js',new Date());
-            gtag('config','G-QVGLEFLZ38');
-          }
-
-          if(this.cookieConsent.marketing&&!window.fbq){
-            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)n._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
-            t=b.createElement(e);t.async=!0;t.src=v;
-            s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
-            }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-            const eventId = 'ev_' + Date.now() + '_' + Math.floor(Math.random()*100000);
-            window.fbq('init','1839880890251639');
-            window.fbq('track','PageView', {}, {eventID: eventId});
-
-            const fbp = this.getCookie('_fbp');
-            const fbc = this.getCookie('_fbc');
-
-            fetch("/.netlify/functions/fb-capi", {
-              method: "POST",
-              headers: {"Content-Type": "application/json"},
-              body: JSON.stringify({
-                event_name: "PageView",
-                event_id: eventId,
-                fbp: fbp,
-                fbc: fbc,
-                url: window.location.href
-              })
-            })
-            .then(r=>r.json())
-            .then(resp=>console.log("fb-capi:", resp))
-            .catch(err=>console.error("fb-capi error:", err));
-          }
-        }
-
-        trackEvent(eventName, params){
-          if(this.cookieConsent.analytics&&window.gtag) window.gtag('event',eventName,params||{});
-          if(this.cookieConsent.marketing&&window.fbq) window.fbq('track',eventName,params||{});
-        }
-      }
-
-      window.cookieManager = new CookieManager();
-
-      document.addEventListener('click',function(e){
-        const tel=e.target.closest?.('a[href^="tel:"]');
-        if(tel) window.cookieManager.trackEvent('Contact',{event_category:'click',event_label:'phone'});
-        const cta=e.target.closest?.('.cta-button');
-        if(cta) window.cookieManager.trackEvent('CTA_Click',{event_category:'button',event_label:(cta.textContent||'').trim()});
-      });
-
-      document.addEventListener('submit',function(e){
-        if(e.target?.id==='estimateForm') window.cookieManager.trackEvent('Lead',{event_category:'form',event_label:'estimate_form'});
-      });
-
-    })();
     </script>
 </body>
 </html>
