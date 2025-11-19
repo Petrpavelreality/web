@@ -514,42 +514,23 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 108px;
-            height: 76px;
-            background: rgba(5, 15, 36, 0.45);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            border-radius: 16px;
+            background: rgba(199, 164, 110, 0.92);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            color: var(--white);
+            font-size: 1.1rem;
             cursor: pointer;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
-            display: grid;
-            place-items: center;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.2s ease, background 0.2s ease;
         }
 
         .video-play-button:hover {
-            transform: translate(-50%, -50%) scale(1.04);
-            box-shadow: 0 24px 55px rgba(0, 0, 0, 0.5);
-        }
-
-        .video-play-button::before {
-            content: '';
-            display: block;
-            width: 68px;
-            height: 68px;
-            border-radius: 50%;
-            background: #f00;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-        }
-
-        .video-play-button::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-40%, -50%);
-            border-left: 20px solid white;
-            border-top: 14px solid transparent;
-            border-bottom: 14px solid transparent;
+            transform: translate(-50%, -50%) scale(1.03);
+            background: rgba(155, 125, 79, 0.95);
         }
 
         .cta-section {
@@ -576,17 +557,6 @@
             color: #555;
             font-size: 1.05rem;
             margin-bottom: 2rem;
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            border: 0;
         }
 
         .price-highlight {
@@ -982,7 +952,7 @@
                 <div class="video-wrapper scroll-fade-in" id="youtube-player">
                     <img src="https://img.youtube.com/vi/vJznDISW6kg/maxresdefault.jpg" alt="Náhled videoprohlídky bytu 1+kk Praha" loading="lazy">
                     <button class="video-play-button" type="button" onclick="loadVideo()" aria-label="Přehrát videoprohlídku">
-                        <span class="sr-only">Spustit video</span>
+                        ▶️ Přehrát video
                     </button>
                 </div>
             </div>
@@ -991,11 +961,11 @@
         <section class="cta-section" id="kontakt">
             <div class="container">
                 <div class="cta-card scroll-fade-in">
+                    <h3>Už máte zarezervovaný termín prohlídky?</h3>
                     <div class="price-highlight" aria-label="Aktuální kupní cena bytu">
                         Aktuální cena
                         <strong>6 690 000 Kč</strong>
                     </div>
-                    <h3>Už máte zarezervovaný termín prohlídky?</h3>
                     <p>Těším se na Vás osobně. Domluvte si prohlídku ještě dnes a objevte kouzlo tohoto výjimečného bytu.</p>
                     <div class="contact-links">
                         <a class="contact-link" href="tel:+420739532056">📞 +420 739 532 056</a>
