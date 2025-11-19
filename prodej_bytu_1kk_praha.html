@@ -559,6 +559,32 @@
             margin-bottom: 2rem;
         }
 
+        .price-section {
+            background: var(--light-bg);
+        }
+
+        .price-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 2.6rem 2.4rem;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .price-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary-bg);
+            margin-bottom: 0.6rem;
+        }
+
+        .price-card p {
+            color: #4a5568;
+            margin-top: 0.6rem;
+            margin-bottom: 0;
+        }
+
         .price-highlight {
             display: inline-flex;
             align-items: center;
@@ -958,14 +984,22 @@
             </div>
         </section>
 
+        <section class="price-section">
+            <div class="container">
+                <div class="price-card scroll-fade-in" aria-label="Aktuální kupní cena bytu">
+                    <h3>Aktuální cena</h3>
+                    <div class="price-highlight">
+                        🏷️ <strong>6 690 000 Kč</strong>
+                    </div>
+                    <p>Cena zahrnuje provizi a kompletní právní servis.</p>
+                </div>
+            </div>
+        </section>
+
         <section class="cta-section" id="kontakt">
             <div class="container">
                 <div class="cta-card scroll-fade-in">
                     <h3>Už máte zarezervovaný termín prohlídky?</h3>
-                    <div class="price-highlight" aria-label="Aktuální kupní cena bytu">
-                        Aktuální cena
-                        <strong>6 690 000 Kč</strong>
-                    </div>
                     <p>Těším se na Vás osobně. Domluvte si prohlídku ještě dnes a objevte kouzlo tohoto výjimečného bytu.</p>
                     <div class="contact-links">
                         <a class="contact-link" href="tel:+420739532056">📞 +420 739 532 056</a>
