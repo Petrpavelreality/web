@@ -590,17 +590,36 @@
         }
 
         .price-section {
-            background: #fdfbf7;
-            padding: 2.5rem 1rem;
+            background: var(--light-bg);
+            padding: 3rem 1rem;
         }
 
         .price-section .container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .price-card {
+            background: var(--white);
+            border-radius: 18px;
+            padding: 2.5rem 3rem;
+            box-shadow: var(--shadow-lg);
             text-align: center;
+            max-width: 560px;
+            width: 100%;
+        }
+
+        .price-label {
+            color: var(--primary-bg);
+            font-weight: 600;
+            font-size: 1.05rem;
+            letter-spacing: 0.3px;
+            margin: 0 0 0.75rem;
         }
 
         .listing-price {
             color: var(--primary-text);
-            font-size: 2rem;
+            font-size: 2.6rem;
             font-weight: 700;
             font-family: 'Playfair Display', Georgia, serif;
             margin: 0;
@@ -985,7 +1004,10 @@
 
         <section class="price-section">
             <div class="container">
-                <p class="listing-price">6 690 000 Kč</p>
+                <div class="price-card scroll-fade-in">
+                    <p class="price-label">Aktuální cena</p>
+                    <p class="listing-price">6 690 000 Kč</p>
+                </div>
             </div>
         </section>
 
