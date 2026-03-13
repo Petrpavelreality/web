@@ -368,15 +368,15 @@
         }
         
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-text);
             text-decoration: none;
-            font-family: 'Playfair Display', Georgia, serif;
-            letter-spacing: 0.5px;
             display: flex;
             align-items: center;
             gap: 0.8rem;
+        }
+
+        .logo-personal {
+            height: 34px;
+            width: auto;
         }
         
         .logo img {
@@ -475,12 +475,10 @@
             z-index: 1;
         }
         
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            margin-bottom: 1rem;
-            color: var(--primary-text);
-            font-weight: 600;
-            letter-spacing: -0.5px;
+        .hero-logo {
+            width: min(700px, 90%);
+            height: auto;
+            margin-bottom: 1.5rem;
         }
         
         .hero p {
@@ -1494,8 +1492,8 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="#" class="logo">
-                PETR PAVEL
+            <a href="#" class="logo" aria-label="Petr Pavel Reality - domovská stránka">
+                <img src="Petr_pavel_logo.svg" alt="Petr Pavel Reality logo - realitní makléř Praha a Středočeský kraj" class="logo-personal">
                 <img src="logo.png" alt="QARA Reality logo">
             </a>
             <ul class="nav-links">
@@ -1516,7 +1514,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>PETR PAVEL</h1>
+        <img src="Petr_pavel_logo_bile.svg" alt="Petr Pavel Reality - profesionální realitní služby v Praze" class="hero-logo">
         <p style="font-size: 1.4rem; color: var(--primary-text); margin-bottom: 0.5rem; font-weight: 500;">Jméno, které znáte. Výsledky, které chcete.</p>
         <p>Váš <span id="changingWord" style="color: var(--primary-text); font-weight: 600;">důvěryhodný</span> realitní makléř pro Prahu a Středočeský kraj.</p>
         <a href="#estimate" class="cta-button">Získat bezplatný odhad ceny nemovitosti</a>
