@@ -375,7 +375,7 @@
         }
         
         .logo_personal {
-            height: 25px;
+            height: 45px;
             width: auto;
         }
 
@@ -384,6 +384,10 @@
             width: auto;
         }
         
+        .logo img.logo-personal {
+            height: 45px;
+        }
+
         .nav-links {
             display: flex;
             list-style: none;
@@ -451,12 +455,15 @@
         .hero {
             background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
             color: var(--white);
-            padding: 4rem 2rem 4rem;
+            padding: 3.5rem 2rem 4rem;
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 0rem;
             position: relative;
             overflow: hidden;
             min-height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .hero::before {
@@ -476,7 +483,7 @@
         }
         
         .hero_logo {
-            width: min(700px, 90%);
+            width: min(860px, 96%);
             height: auto;
             display: block;
             margin: 0 auto;
@@ -491,6 +498,17 @@
             font-weight: 300;
         }
         
+        .hero p.hero-tagline {
+            font-size: 1.4rem;
+            color: var(--primary-text);
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .hero p.hero-subtext {
+            margin-top: 0;
+        }
+
         /* Optimized CTA Button */
         .cta-button {
             background: var(--primary-text);
@@ -1274,11 +1292,11 @@
             }
             
             .hero {
-                padding: 4rem 1rem 3rem;
+                padding: 3.2rem 1rem 3rem;
             }
             
-            .hero h1 {
-                font-size: 2rem;
+            .hero_logo {
+                width: min(960px, 100%);
             }
             
             section {
@@ -1338,10 +1356,7 @@
         }
         
         @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
+
             .cta-button {
                 padding: 0.8rem 1.5rem;
                 font-size: 1rem;
@@ -1515,9 +1530,9 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <img src="Petr_pavel_logo_bile.svg" alt="Petr Pavel - realitní makléř Praha QARA" class="hero logo" loading="lazy">
-        <p style="font-size: 1.4rem; color: var(--primary-text); margin-bottom: 0.5rem; font-weight: 500;">Jméno, které znáte. Výsledky, které chcete.</p>
-        <p>Váš <span id="changingWord" style="color: var(--primary-text); font-weight: 600;">důvěryhodný</span> realitní makléř pro Prahu a Středočeský kraj.</p>
+        <img src="Petr_pavel_logo_bile.svg" alt="Petr Pavel - realitní makléř Praha QARA" class="hero-logo">
+        <p class="hero-tagline">Jméno, které znáte. Výsledky, které chcete.</p>
+        <p class="hero-subtext">Váš <span id="changingWord" style="color: var(--primary-text); font-weight: 600;">důvěryhodný</span> realitní makléř pro Prahu a Středočeský kraj.</p>
         <a href="#estimate" class="cta-button">Získat bezplatný odhad ceny nemovitosti</a>
     </section>
 
