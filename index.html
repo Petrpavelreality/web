@@ -375,8 +375,9 @@
         }
         
         .logo_personal {
-            height: 68px;
+            height: 96px;
             width: auto;
+            display: block;
         }
 
         .logo img {
@@ -386,7 +387,7 @@
         }
         
         .logo img.logo-personal {
-            height: 68px;
+            height: 96px;
         }
 
         .nav-links {
@@ -456,9 +457,9 @@
         .hero {
             background: linear-gradient(135deg, var(--primary-bg) 0%, var(--secondary-bg) 100%);
             color: var(--white);
-            padding: 4rem 2rem 4rem;
+            padding: 1rem 2rem 4rem;
             text-align: center;
-            margin-top: 2rem;
+            margin-top: 96px;
             position: relative;
             overflow: hidden;
             min-height: 500px;
@@ -484,10 +485,11 @@
         }
         
         .hero_logo {
-            width: min(1200px, 100%);
+            width: min(1800px, 130vw);
             height: auto;
             display: block;
-            margin: 1rem auto;
+            margin: 0 auto 1rem;
+            max-width: none;
         }
         
         .hero p {
@@ -500,14 +502,14 @@
         }
         
         .hero p.hero-tagline {
-            font-size: 1.4rem;
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
             color: var(--primary-text);
             margin: 0;
             font-weight: 500;
         }
 
         .hero p.hero-subtext {
-            margin-top: 1rem;
+            margin-top: 0;
         }
 
         /* Optimized CTA Button */
@@ -1293,12 +1295,14 @@
             }
             
             .hero {
-                padding: 3.2rem 1rem 3rem;
+                padding: 1rem 1rem 3rem;
+                margin-top: 96px;
             }
             
             .hero_logo {
-                width: min(1200px, 100%);
-                margin: 1rem auto;
+                width: min(1800px, 130vw);
+                margin: 0 auto 1rem;
+                max-width: none;
             }
             
             section {
