@@ -374,19 +374,16 @@
             gap: 0.8rem;
         }
         
-        .logo_personal {
-            height: 68px;
-            width: auto;
-        }
-
         .logo img {
             height: 30px;
             width: auto;
             display: block;
         }
-        
-        .logo img.logo-personal {
-            height: 68px;
+
+        .logo_personal,
+        .logo img.logo_personal {
+            height: 102px;
+            width: auto;
         }
 
         .nav-links {
@@ -483,11 +480,13 @@
             z-index: 1;
         }
         
-        .hero_logo {
+        .hero_logo, .hero-logo {
             width: min(1200px, 100%);
             height: auto;
             display: block;
             margin: 1rem auto;
+            transform: scale(1.5);
+            transform-origin: center center;
         }
         
         .hero p {
@@ -508,6 +507,7 @@
 
         .hero p.hero-subtext {
             margin-top: 1rem;
+            font-size: 1.4rem;
         }
 
         /* Optimized CTA Button */
@@ -1511,7 +1511,7 @@
     <header>
         <nav>
             <a href="#" class="logo" aria-label="Petr Pavel Reality - domovská stránka">
-                <img src="Petr_pavel_logo.svg" alt="Petr Pavel Reality logo - realitní makléř Praha a Středočeský kraj" class="logo_personal" loading="lazy">
+                <img src="Petr_pavel_logo.svg" alt="Petr Pavel Reality logo - realitní makléř Praha a Středočeský kraj" class="logo_personal">
                 <img src="logo.png" alt="QARA Reality logo">
             </a>
             <ul class="nav-links">
@@ -1853,7 +1853,7 @@
                 <div class="contact-item">
                     <div class="contact-icon">✉️</div>
                     <h3>E-mail</h3>
-                    <p><a href="mailto:petr.pavel@qara.cz">petr.pavel@qara.cz</a></p>
+                    <p><a href="/cdn-cgi/l/email-protection#c8b8adbcbae6b8a9beada488b9a9baa9e6abb2"><span class="__cf_email__" data-cfemail="9eeefbeaecb0eeffe8fbf2deefffecffb0fde4">[email&#160;protected]</span></a></p>
                     <p>Odpovídám do 24 hodin</p>
                 </div>
             </div>
@@ -1890,7 +1890,7 @@
         </div>
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Performance optimization - Debounce function
         function debounce(func, wait) {
             let timeout;
@@ -2634,15 +2634,4 @@
     const tel=e.target.closest?.('a[href^="tel:"]');
     if(tel) window.cookieManager.trackEvent('Contact',{event_category:'click',event_label:'phone'});
     const cta=e.target.closest?.('.cta-button');
-    if(cta) window.cookieManager.trackEvent('CTA_Click',{event_category:'button',event_label:(cta.textContent||'').trim()});
-  });
-
-  document.addEventListener('submit',function(e){
-    if(e.target?.id==='estimateForm') window.cookieManager.trackEvent('Lead',{event_category:'form',event_label:'estimate_form'});
-  });
-
-})();
-
-</script>
-</body>
-</html>
+    if(cta) window.cookieManager.trackEvent('CTA_Click',{event_category:'button',event_label:(cta.textContent||
