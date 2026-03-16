@@ -509,6 +509,12 @@
             margin-top: 0.5rem;
             font-size: 1.2rem;
         }
+        @media (max-width: 768px) {
+            .hero p.hero-tagline,
+            .hero p.hero-subtext {
+                font-size: clamp(1rem, 4vw, 1.2rem);
+            }
+        }
 
         /* Optimized CTA Button */
         .cta-button {
