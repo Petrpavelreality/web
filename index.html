@@ -1700,6 +1700,14 @@
                         <p>Luxusní klimatizovaný mezonet v projektu The Clock Palace Prague. Panoramatické výhledy, parkování i EV nabíjení.</p>
                     </div>
                 </a>
+                <a href="prodej_pozemku_porici.html" target="_blank" class="property-card">
+                    <img src="prodej_pozemku_porici1.webp" alt="Prodej pozemku Poříčí nad Sázavou" class="property-img lazy" loading="lazy">
+                    <div class="property-info">
+                        <h3>Prodej pozemku 418 m², Poříčí nad Sázavou</h3>
+                        <p class="property-price" style="color: var(--primary-text);">1 995 000 CZK</p>
+                        <p>Stavební pozemek u Konopišťského potoka v blízkosti zeleně a historie. Občanská vybavenost, Praha do 40 minut.</p>
+                    </div>
+                </a>
                 <a href="prodej_domu_kladno.html" target="_blank" class="property-card">
                     <img src="prodej_domu_kladno1.webp" alt="Prodej domu Kladno" class="property-img lazy" loading="lazy">
                     <div class="property-info">
@@ -2640,4 +2648,4 @@
     const tel=e.target.closest?.('a[href^="tel:"]');
     if(tel) window.cookieManager.trackEvent('Contact',{event_category:'click',event_label:'phone'});
     const cta=e.target.closest?.('.cta-button');
-    if(cta) window.cookieManager.trackEvent('CTA_Click',{event_category:'button',event_label:(cta.textContent||
+    if(cta) window.cookieManager.trackEvent('CTA_Click',{event_category:'button',event_label:(cta.textContent||'CTA')});
